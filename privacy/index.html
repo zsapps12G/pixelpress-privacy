@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PixelPress</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; padding: 0 20px; color: #222; line-height: 1.7; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.2em; }
+    h2 { font-size: 1.15rem; margin-top: 2em; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2em; }
+    .summary { background: #f0f0ff; border-left: 4px solid #5B5BD6; padding: 14px 18px; border-radius: 4px; margin-bottom: 2em; }
+    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+    th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; font-size: 0.9rem; }
+    th { background: #f5f5f5; }
+    a { color: #5B5BD6; }
+  </style>
+</head>
+<body>
+
+<h1>Privacy Policy — PixelPress</h1>
+<p class="meta">
+  <strong>Developer:</strong> ZS Apps &nbsp;|&nbsp;
+  <strong>Contact:</strong> <a href="mailto:indiedev71@gmail.com">indiedev71@gmail.com</a> &nbsp;|&nbsp;
+  <strong>Effective date:</strong> 2026-05-06<br>
+  Applies to: PixelPress for Android, version 1.0.0 and above
+</p>
+
+<div class="summary">
+  <strong>The short version:</strong> PixelPress does not collect, transmit, or share any data about you or your photos. Everything happens on your device. Nothing leaves your phone.
+</div>
+
+<h2>1. What the app accesses</h2>
+<p><strong>Your photos — only when you choose them.</strong></p>
+<p>When you tap "Convert a Photo" or "Convert Multiple", the app opens the Android system photo picker. You select the photos you want to compress or convert. The app reads those photos into memory solely to perform the compression or conversion you requested.</p>
+<p>The app does not browse your photo library in the background. It does not access photos you have not explicitly selected.</p>
+
+<h2>2. What is stored on your device</h2>
+<p>PixelPress stores two types of data locally on your device using Android's standard SharedPreferences storage. This data never leaves your device.</p>
+
+<p><strong>Compression history</strong><br>
+After each successful conversion, the app saves a record containing:</p>
+<ul>
+  <li>The original file's name (e.g., IMG_0042.HEIC)</li>
+  <li>The output format you chose (JPG, PNG, or WebP)</li>
+  <li>The original file size in bytes</li>
+  <li>The compressed file size in bytes</li>
+  <li>The quality setting you used (0–100)</li>
+  <li>The date and time of the conversion</li>
+</ul>
+<p>This is the data shown in the History screen. The history is capped at 200 entries. You can delete it at any time: open History → tap the menu (⋮) → Clear all.</p>
+
+<p><strong>Settings</strong><br>
+The app remembers your preferred default output format and default quality level so you do not have to reset them each time. These two values are stored locally and are not linked to any account or identity.</p>
+
+<p><strong>Temporary files</strong><br>
+During compression, the app writes the output file to Android's temporary directory. This is managed by the operating system. The file is accessible to you only through the Save to Gallery or Share actions. It is not stored permanently by the app.</p>
+
+<h2>3. What is NOT collected, transmitted, or shared</h2>
+<p>The following is an explicit list of things PixelPress does not do:</p>
+<ul>
+  <li>Does not send any data to any server</li>
+  <li>Does not use any analytics or crash-reporting service (no Firebase, no Crashlytics, no Sentry, or similar tools in v1.0)</li>
+  <li>Does not display advertisements (no AdMob or any other ad network in v1.0)</li>
+  <li>Does not require or create a user account</li>
+  <li>Does not collect your name, email address, or any personal identifier</li>
+  <li>Does not read your device's advertising ID, IMEI, or any unique hardware identifier</li>
+  <li>Does not access your location</li>
+  <li>Does not access your camera</li>
+  <li>Does not access your contacts or call logs</li>
+  <li>Does not access your microphone</li>
+  <li>Does not send push notifications</li>
+  <li>Does not share anything with third parties</li>
+</ul>
+<p>The app has no INTERNET permission. It is technically incapable of making a network connection.</p>
+
+<h2>4. Permissions and why the app needs them</h2>
+<table>
+  <tr><th>Permission</th><th>Android version</th><th>Why it is needed</th></tr>
+  <tr><td>READ_MEDIA_IMAGES</td><td>Android 13 and above</td><td>To read the photos you select from the system picker</td></tr>
+  <tr><td>READ_EXTERNAL_STORAGE</td><td>Android 12 and below</td><td>Same purpose on older Android versions</td></tr>
+  <tr><td>WRITE_EXTERNAL_STORAGE</td><td>Android 9 and below</td><td>To save the compressed output to your gallery on very old Android versions</td></tr>
+</table>
+<p>The app does not request any other permissions — not camera, location, microphone, contacts, notifications, or advertising ID.</p>
+
+<h2>5. Third-party open-source libraries</h2>
+<p>PixelPress uses the following open-source packages. All processing happens on your device. None of these libraries transmit data off your device.</p>
+<table>
+  <tr><th>Library</th><th>Purpose</th></tr>
+  <tr><td>flutter_image_compress</td><td>Performs image compression and HEIC conversion on-device</td></tr>
+  <tr><td>image_picker</td><td>Presents the Android system photo picker</td></tr>
+  <tr><td>gal</td><td>Saves the compressed output to your gallery via Android's MediaStore API</td></tr>
+  <tr><td>share_plus</td><td>Opens the Android system share sheet so you can send the file to another app</td></tr>
+  <tr><td>url_launcher</td><td>Opens links (Privacy Policy, Play Store) in your device's browser — the app itself makes no network call</td></tr>
+  <tr><td>shared_preferences</td><td>Stores history and settings locally on your device</td></tr>
+  <tr><td>path_provider / path</td><td>Resolves file paths on-device — no network involvement</td></tr>
+</table>
+
+<h2>6. Children's privacy</h2>
+<p>PixelPress is a general-purpose utility app. It is not directed at children under the age of 13 and does not knowingly collect personal information from anyone, including children. Given that the app collects no data at all, there is no special handling required — but we confirm explicitly that no children's data is collected or processed.</p>
+
+<h2>7. Your rights</h2>
+<p>Because PixelPress stores data only locally on your device, you have full control:</p>
+<ul>
+  <li><strong>Delete history:</strong> History → ⋮ → Clear all</li>
+  <li><strong>Delete everything:</strong> Uninstall the app. Android removes all app data, including SharedPreferences, on uninstall.</li>
+</ul>
+<p>There is no server-side data to request deletion of, because no data is ever sent to a server.</p>
+
+<h2>8. Future versions</h2>
+<p>PixelPress v1.0 has no advertising and no analytics. Future versions (v1.1 onwards) may introduce Google AdMob banner ads and optional analytics. If that happens:</p>
+<ul>
+  <li>This privacy policy will be updated to accurately describe what is collected and shared</li>
+  <li>The update will be published at this URL before the new version is released</li>
+  <li>The "Effective date" at the top of this page will be updated</li>
+  <li>The Data Safety section in the Google Play listing will be updated to match</li>
+</ul>
+<p>We will not add any data-collection feature without updating this policy first.</p>
+
+<h2>9. Changes to this policy</h2>
+<p>If this policy changes, the revised version will be published at this same URL with an updated effective date. Continued use of the app after a policy update constitutes acceptance of the updated policy.</p>
+
+<h2>10. Jurisdiction and applicable law</h2>
+<p>ZS Apps is based in Melbourne, Victoria, Australia. This policy is written to comply with the Australian Privacy Act 1988.</p>
+<p>If you are located in the European Economic Area, you have rights under the General Data Protection Regulation (GDPR). If you are located in California, USA, you have rights under the California Consumer Privacy Act (CCPA). Because PixelPress collects no personal data, no special action is required on our part under these laws — but we acknowledge them and will comply fully with any valid data request.</p>
+
+<h2>11. Contact</h2>
+<p>For any privacy-related questions or concerns:</p>
+<p>
+  <strong>Email:</strong> <a href="mailto:indiedev71@gmail.com">indiedev71@gmail.com</a><br>
+  <strong>Subject line:</strong> PixelPress Privacy
+</p>
+<p>We aim to respond within 5 business days.</p>
+
+</body>
+</html>
